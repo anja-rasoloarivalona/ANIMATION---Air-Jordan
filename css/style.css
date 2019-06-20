@@ -151,14 +151,38 @@ body {
 
 .edition {
   width: 100%;
-  height: 40vh;
-  background: red;
+  height: 50vh;
+  background-image: linear-gradient(324deg, rgba(195, 38, 49, 0.432) 52%, rgba(195, 38, 49, 0.432) 100%), url("../img/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center; }
   .edition__text {
     font-size: 6rem;
-    font-weight: 600; }
+    font-weight: 600;
+    margin-right: 3rem;
+    color: white; }
+
+.count {
+  width: 7rem;
+  height: 7rem;
+  font-size: 3rem;
+  background: #1a1919;
+  border-radius: 50%;
+  border: 1px solid #c32630;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-family: verdana;
+  padding: 1.5rem; }
+
+.test {
+  height: 50vh;
+  width: 100vw; }
 
 .jordan {
   width: 100%;

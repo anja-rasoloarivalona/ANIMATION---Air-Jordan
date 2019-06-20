@@ -24,14 +24,8 @@ $( document ).ready(function() {
       .to('.main__shoe', .5, {position: 'absolute'})
       
 
-      
-      // The animation above is triggered automatically
-      //But if you add this then no
-      
   
-      var controller = new ScrollMagic.Controller();
-      
-      
+      var controller = new ScrollMagic.Controller();      
       var scene1 = new ScrollMagic.Scene({
           triggerElement: '.details',
           triggerHook: 1,
@@ -44,50 +38,97 @@ $( document ).ready(function() {
    //   .addIndicators()
       .addTo(controller);
 
-
+   
     
-      $('.logo').on('click',function() {
+/*
 
-        var u = new TimelineMax({repeat:0});  
-        u
-          .to('.main__shoe', 1.2, {scale: 1.4})
+    //$(".count").position().top)
+      var scroll = $(window).scrollTop(); 
+      let stop = 0;
+
+      $(window).on('scroll', function() { 
+    
+        console.log(scroll);
+        var counters = $(".count");
+
+        if(scroll >= 2900  && stop == 0) {
+         
+          var countersQuantity = counters.length;
+          var counter = [];
+        
+          for (i = 0; i < countersQuantity; i++) {
+            counter[i] = parseInt(counters[i].innerHTML);
+          }
+        
+          var count = function(start, value, id) {
+            var localStart = start;
+            setInterval(function() {
+              if (localStart < value) {
+                localStart++;
+                counters[id].innerHTML = localStart;
+              }
+            }, 70);
+          }
+        
+          for (j = 0; j < countersQuantity; j++) {
+            count(0, counter[j], j);
+          
+          }
+
+          stop = 1;
+
+         
+        } 
       })
-
-
-
+ */
+      
      
 
-      $('.details__control__item--2').on('click',function() {
+$(function() {
+  var counters = $(".count");
+  var stop = 0;
 
-        var u = new TimelineMax({repeat:0});  
-        u
-          .to('.main__shoe', 1, {y: '10%', x: '-10%'}) 
-      })
-   
-  
+    $('.count').on('reached', function() {
 
+      if(stop === 0) {
+        var countersQuantity = counters.length;
+        var counter = [];
+      
+        for(i = 0; i < countersQuantity; i++) {
+          counter[i] = parseInt(counters[i].innerHTML);
+        }
+      
+        var count = function(start, value, id) {
+          var localStart = start;
+          setInterval(function() {
+            if (localStart < value) {
+              localStart++;
+              counters[id].innerHTML = localStart;
+            }
+          }, 10);
+        }
+      
+        for (j = 0; j < countersQuantity; j++) {
+          count(0, counter[j], j);     
+        }
 
-      var counters = $(".count");
-      var countersQuantity = counters.length;
-      var counter = [];
-    
-      for (i = 0; i < countersQuantity; i++) {
-        counter[i] = parseInt(counters[i].innerHTML);
+        return stop = 1;
       }
-    
-      var count = function(start, value, id) {
-        var localStart = start;
-        setInterval(function() {
-          if (localStart < value) {
-            localStart++;
-            counters[id].innerHTML = localStart;
-          }
-        }, 4);
-      }
-    
-      for (j = 0; j < countersQuantity; j++) {
-        count(0, counter[j], j);
-      }
+      
+  });
+
+    $(document).on('scroll', function() {
+        $('.count').each(function() {
+            var wt = $(window).scrollTop();
+            var at = $(this).position().top;
+            var dt = at - wt;
+            console.log(dt);
+            if( dt >= 0 && dt < 550)
+                $(this).trigger('reached');
+        });
+    });
+})
+
     
 
    

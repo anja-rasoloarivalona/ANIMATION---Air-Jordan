@@ -1,38 +1,63 @@
 .details {
   width: 100%;
   height: 100vh;
- position: relative;
+  position: relative;
 
-
- &__text {
-   position: absolute;
-   width: 40%;
-   height: 45%;
-   top: 0;
-   bottom: 0rem;
-   right: 11rem;
-   margin: auto;
-   font-size: 2.6rem;
-   line-height: 1.3;
-   text-align: start;
-
-
- }
-
+  &__text {
+    position: absolute;
+    width: 40%;
+    height: 45%;
+    top: 0;
+    bottom: 0rem;
+    right: 11rem;
+    margin: auto;
+    font-size: 2.6rem;
+    line-height: 1.3;
+    text-align: start;
+  }
 }
 
 .edition {
   width: 100%;
-  height: 40vh;
-  background: red;
+  height: 50vh;
+  background-image: linear-gradient(
+      324deg,
+      rgba(195, 38, 49, 0.432) 52%,
+      rgba(195, 38, 49, 0.432) 100%
+    ),
+    url("../img/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
 
-
   &__text {
     font-size: 6rem;
     font-weight: 600;
-
+    margin-right: 3rem;
+    color: white;
   }
+}
+
+.count {
+  width: 7rem;
+  height: 7rem;
+  font-size: 3rem;
+  background: rgb(26, 25, 25);
+  border-radius: 50%;
+  border: 1px solid rgb(195,38,48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-family: verdana;
+  padding: 1.5rem;
+}
+
+.test {
+  height: 50vh;
+  width: 100vw;
 }
