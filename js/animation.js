@@ -23,7 +23,31 @@ $( document ).ready(function() {
     
 
 
- 
+
+      var a = new TimelineMax();
+      //set d
+      a
+      .to('.layer', .5, {opacity: 0} )
+
+      
+      // The animation above is triggered automatically
+      //But if you add this then no
+      
+      
+      var controller = new ScrollMagic.Controller();
+      
+      
+      var scene1 = new ScrollMagic.Scene({
+          triggerElement: '.details',
+          triggerHook: 1,
+          duration: "100%",
+          offset: 150
+          
+      })
+      .reverse(true)
+      .setTween(a)
+      .addIndicators()
+      .addTo(controller);
 
 
 
