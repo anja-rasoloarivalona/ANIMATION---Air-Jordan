@@ -1,0 +1,107 @@
+:root {
+  --font-primary: sans-serif;
+  --color-primary: red; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-primary);
+  text-align: center; }
+
+.loader {
+  background-image: url("../img/jordan.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex; }
+  .loader__bar {
+    height: .5rem;
+    width: 30%;
+    background: #1b3263;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1rem #2187e7b3;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 9rem;
+    margin: auto; }
+    .loader__bar__inner {
+      height: 80%;
+      background: #2187e7;
+      width: 0%;
+      left: 0;
+      position: absolute; }
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  opacity: 0; }
+  .home__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; }
+  .home__text {
+    font-size: 40rem;
+    font-weight: 600;
+    position: absolute;
+    color: rgba(218, 218, 218, 0.178); }
+  .home__details {
+    position: absolute;
+    left: 20rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    justify-content: space-around; }
+    .home__details__brand {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 8px; }
+    .home__details__model {
+      font-size: 11rem;
+      font-weight: 600;
+      transform: translateX(10%);
+      opacity: 0; }
+      .home__details__model__inner {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 1rem;
+        background: #3e3eb9;
+        height: 40%;
+        clip-path: polygon(0 0, 76% 0, 100% 100%, 0 100%);
+        z-index: 3; }
+    .home__details__submodel {
+      font-size: 13rem;
+      font-weight: 600;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      transform: translateX(-100%); }
+      .home__details__submodel__inner {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1rem;
+        background: #5e5e6b;
+        height: 50%;
+        clip-path: polygon(0 0, 76% 0, 100% 100%, 0 100%);
+        z-index: 3; }
