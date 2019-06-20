@@ -121,13 +121,13 @@ body {
     width: 100%;
     object-fit: cover; }
 
-.intro {
+.jordan {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center; }
-  .intro__text {
+  .jordan__text {
     width: 50%;
     height: 90%;
     margin: auto;
@@ -136,19 +136,19 @@ body {
     font-weight: 600;
     flex-direction: column;
     justify-content: center; }
-    .intro__text p {
+    .jordan__text p {
       text-align: center;
       width: 50%;
       font-size: 1.3rem;
       line-height: 1.3;
       margin-left: 8rem; }
-  .intro__title {
+  .jordan__title {
     width: 50%;
     font-size: 4rem;
     position: relative;
     margin-bottom: 3rem;
     margin-left: 8rem; }
-    .intro__title__img {
+    .jordan__title__img {
       position: absolute;
       top: 0;
       bottom: 1rem;
@@ -161,11 +161,11 @@ body {
       background-size: cover;
       background-position: center;
       z-index: -1; }
-    .intro__title__text {
+    .jordan__title__text {
       color: white;
       z-index: 20;
       text-align: center; }
-  .intro__img {
+  .jordan__img {
     width: 45%;
     height: 90%;
     margin: auto;
@@ -176,65 +176,55 @@ body {
     box-shadow: 10px 10px 24px -12px #080808;
     border-radius: 3px; }
 
-.home {
+.nike {
+  width: 100%;
   height: 100vh;
-  width: 100vw;
-  overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  opacity: 0; }
-  .home__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block; }
-  .home__text {
-    font-size: 40rem;
-    font-weight: 600;
-    position: absolute;
-    color: rgba(218, 218, 218, 0.178); }
-  .home__details {
-    position: absolute;
-    left: 20rem;
-    color: white;
+  justify-content: center; }
+  .nike__text {
+    width: 50%;
+    height: 90%;
+    margin: auto;
+    z-index: 2;
     display: flex;
+    font-weight: 600;
     flex-direction: column;
-    height: 40%;
-    justify-content: space-around; }
-    .home__details__brand {
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 8px; }
-    .home__details__model {
-      font-size: 11rem;
-      font-weight: 600;
-      transform: translateX(10%);
-      opacity: 0; }
-      .home__details__model__inner {
-        position: absolute;
-        top: 10%;
-        left: 0;
-        width: 1rem;
-        background: #3e3eb9;
-        height: 40%;
-        clip-path: polygon(0 0, 76% 0, 100% 100%, 0 100%);
-        z-index: 3; }
-    .home__details__submodel {
-      font-size: 13rem;
-      font-weight: 600;
-      position: relative;
-      z-index: 2;
-      opacity: 0;
-      transform: translateX(-100%); }
-      .home__details__submodel__inner {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 1rem;
-        background: #5e5e6b;
-        height: 50%;
-        clip-path: polygon(0 0, 76% 0, 100% 100%, 0 100%);
-        z-index: 3; }
+    justify-content: center;
+    align-items: center; }
+    .nike__text p {
+      text-align: center;
+      width: 50%;
+      font-size: 1.3rem;
+      line-height: 1.3;
+      margin-left: 9rem; }
+  .nike__title {
+    width: 50%;
+    font-size: 3rem;
+    position: relative;
+    margin-bottom: 6rem;
+    margin-left: 9rem; }
+    .nike__title__img {
+      position: absolute;
+      top: 4.9rem;
+      bottom: 0;
+      left: 2rem;
+      right: 0;
+      margin: auto;
+      width: 15rem;
+      object-fit: cover;
+      z-index: -1; }
+    .nike__title__text {
+      color: white;
+      z-index: 20;
+      text-align: center; }
+  .nike__img {
+    width: 45%;
+    height: 90%;
+    margin: auto;
+    background-image: linear-gradient(324deg, rgba(195, 38, 49, 0.432) 52%, rgba(195, 38, 49, 0.432) 100%), url("../img/nike.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    box-shadow: 10px 10px 24px -12px #080808;
+    border-radius: 3px; }
