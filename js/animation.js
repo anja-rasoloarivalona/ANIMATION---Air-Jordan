@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
- $(window).on('load', function(){        
+ /*$(window).on('load', function(){        
         var loader = new TimelineMax({repeat:0});  
         loader
           .to('.loader__bar__inner', 3, {width: '100%', ease:Power1.easeInOut},'+=.5') 
@@ -8,7 +8,7 @@ $( document ).ready(function() {
           .to('.loader', 1, {scale: 0, x: '-100%', y:'100%', autoAlpha: 0})
          
 
-    })
+    })*/
 
    var gallery1 = new TimelineMax({repeat:-1});
     //set d
@@ -142,6 +142,28 @@ $(function() {
 })
 
     
+var scrolljordan = new TimelineMax();
+//set d
+scrolljordan 
+.set('.jordan__text', {y: '20%', opacity: 0})
+.set('.jordan__img', {y: '120%' , opacity: 0})
+.to('.jordan__text', 2, {y: '0%',ease:Power1.easeInOut , opacity: 1})
+.to('.jordan__img', 2, {y: '0%', ease:Power1.easeInOut, opacity: 1}, '-=2')
+
+
+
+
+var controller = new ScrollMagic.Controller();      
+var scene1 = new ScrollMagic.Scene({
+    triggerElement: '.jordan',
+    triggerHook: 0,
+    offset: -600
+    
+})
+.reverse(false)
+.setTween(scrolljordan )
+.addIndicators()
+.addTo(controller);
 
    
 
