@@ -1,7 +1,13 @@
 @import "base/base";
 @import "base/typography";
 
+@import "components/layer";
+@import "components/loader";
+
 @import "layout/details";
+@import "layout/edition";
 @import "layout/footer";
+@import "layout/insta";
+@import "layout/intro";
 @import "layout/jordan";
 @import "layout/nike";

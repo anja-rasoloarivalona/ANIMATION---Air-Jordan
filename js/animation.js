@@ -30,10 +30,10 @@ $( document ).ready(function() {
       var a = new TimelineMax();
       //set d
       a
-      .to('.main__bgtext', 1, {autoAlpha: 0})
+      .to('.intro__bgtext', 1, {autoAlpha: 0})
       .to('.layer', .5, {opacity: 0})
-      .to('.main__shoe', 1, {x: '-45%'}, '-=.5')
-      .to('.main__shoe', .5, {position: 'absolute'})
+      .to('.intro__shoe', 1, {x: '-45%'}, '-=.5')
+      .to('.intro__shoe', .5, {position: 'absolute'})
       
 
   

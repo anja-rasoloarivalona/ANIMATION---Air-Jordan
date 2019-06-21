@@ -1,0 +1,35 @@
+.loader {
+    background-image: url('../img/jordan.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    //display: flex;
+    display: none;
+    position: fixed;
+    
+    z-index: 400;
+
+
+
+    &__bar {
+        height: .5rem;
+        width: 30%;
+        background:  #1b3263;
+        border: 1px solid rgba(0,0,0, .3);
+        box-shadow: 0 0 1rem #2187e7b3;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 9rem;
+        margin: auto;
+
+        &__inner {
+            height: 80%;
+            background: #2187e7;
+            width: 0%;
+            left: 0;
+            position: absolute;
+        }
+    }
+}
