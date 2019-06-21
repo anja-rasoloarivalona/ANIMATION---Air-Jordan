@@ -3,7 +3,7 @@
     height: 100vh; 
     position: relative;
     overflow: hidden;
-    
+
 
     &__bgtext {
         position: fixed;
@@ -20,6 +20,28 @@
         z-index: 401;
     }
 
+    &__brand {
+        z-index: 10000;
+        height: 15rem;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: block;
+
+        &--jordan {           
+           left: 0rem;
+           transform: rotateZ(-8deg);
+        }
+
+        &--nike {           
+            right: 0rem;
+            border: none;
+            fill: white !important;
+        }
+    }
+
     &__shoe {
         width: 55rem;
         object-fit: cover;
@@ -29,7 +51,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        z-index: 100;
+        z-index: 10000;
         
 
     }
@@ -111,3 +133,8 @@
     
     
 }
+
+
+
+
+  

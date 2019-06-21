@@ -20,8 +20,7 @@ html {
 body {
   font-family: var(--font-primary);
   text-align: center;
-  overflow-x: hidden;
-  overflow-y: hidden; }
+  overflow-x: hidden; }
 
 ::-webkit-scrollbar {
   display: none; }
@@ -184,6 +183,22 @@ body {
     color: var(--color-red);
     color: rgba(51, 1, 11, 0.153);
     z-index: 401; }
+  .intro__brand {
+    z-index: 10000;
+    height: 15rem;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block; }
+    .intro__brand--jordan {
+      left: 0rem;
+      transform: rotateZ(-8deg); }
+    .intro__brand--nike {
+      right: 0rem;
+      border: none;
+      fill: white !important; }
   .intro__shoe {
     width: 55rem;
     object-fit: cover;
@@ -193,7 +208,7 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-    z-index: 100; }
+    z-index: 10000; }
   .intro__add {
     position: absolute;
     font-size: 13rem;
