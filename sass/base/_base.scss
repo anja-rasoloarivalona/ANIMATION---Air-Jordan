@@ -3,6 +3,8 @@
     --font-primary : sans-serif;
     --color-primary: #c32630;
     --color-primary-dark: #551723;
+    --color-red: #d90c0c;
+    --color-grey: #817e7e;
 }
 
 
@@ -19,13 +21,18 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     
+    
 }
 
 body {
     font-family: var(--font-primary);
     text-align: center;
     overflow-x: hidden;
-    
+    overflow-y: hidden;  
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 

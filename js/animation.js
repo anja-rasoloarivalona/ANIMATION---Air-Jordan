@@ -1,14 +1,25 @@
 $( document ).ready(function() {
 
- /*$(window).on('load', function(){        
-        var loader = new TimelineMax({repeat:0});  
+ $(window).on('load', function(){        
+     /*   var loader = new TimelineMax({repeat:0});  
         loader
-          .to('.loader__bar__inner', 3, {width: '100%', ease:Power1.easeInOut},'+=.5') 
-          .to('.loader__bar', .5, {width: '0%', autoAlpha: 0})
-          .to('.loader', 1, {scale: 0, x: '-100%', y:'100%', autoAlpha: 0})
+        .set('.intro__shoe', {scale: 0, autoAlpha: 0}) 
+        .to('.loader__bar__inner', 3, {width: '100.5%', ease:Power1.easeInOut},'+=.5')
+         .to('.loader__bar__indicator', 3, {x: '28vw', ease:Power1.easeInOut},'-=3') 
+         .to('.loader__bar__indicator', .5, {scale: 0}, '-=.5')
+         .to('.loader__bar', .5, {width: '0%', autoAlpha: 0})
+         .to('.loader', 2, {ease:Power1.easeInOut, scale: '100'}) 
+         .to('.loader', 1, {autoAlpha: 0}, '-=1') 
+         .to('.intro__bgtext', 1, {zIndex: 99, color:'rgba(51, 1, 11, 0.153)'}, '-=1') 
+         .to('.intro__shoe', 2, {ease:Power1.easeInOut, scale: 1, autoAlpha: 1}, '-=1')
+         .to('body', .4, {overflowY: 'scroll'})*/
+
+    
+         
+      
          
 
-    })*/
+    })
 
    var gallery1 = new TimelineMax({repeat:-1});
     //set d

@@ -1,10 +1,11 @@
 .loader {
-    background-image: url('../img/jordan.jpg');
+    background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position: center;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    //display: flex;
+    display: none;
     position: fixed;
     z-index: 400;
 
@@ -13,21 +14,45 @@
     &__bar {
         height: .5rem;
         width: 30%;
-        background:  #1b3263;
-        border: 1px solid rgba(0,0,0, .3);
-        box-shadow: 0 0 1rem #2187e7b3;
+        background: #e4d9de;
+    //    border: 1px solid rgba(0, 0, 0, 0.3);
+         box-shadow: 0 0 1rem var(--color-grey);
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 9rem;
+        bottom: 0rem;
+        top: 15rem;
         margin: auto;
 
         &__inner {
-            height: 80%;
-            background: #2187e7;
+            height: 100%;
+            background: var(--color-red);
             width: 0%;
             left: 0;
             position: absolute;
+        }
+
+        &__indicator {
+            position: absolute;
+            left: -.5rem;
+            height: 6rem;
+            top: 0;
+            bottom: 0;
+            width: 6em;
+            margin: auto;
+            border: 1px solid black;
+            background: var(--color-grey);
+            border-radius: 50px;
+            padding: .4rem;
+
+       
+
+            &__img {
+                width: 80%;
+                object-fit: cover;
+                
+              
+            }
         }
     }
 }
