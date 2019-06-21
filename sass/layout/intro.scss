@@ -15,7 +15,8 @@
         font-size: 13rem;
         font-weight: 800;
         color: #33010b27;
-        z-index: 99;
+      //  z-index: 99;
+        z-index: 401;
     }
 
     &__shoe {
@@ -81,6 +82,7 @@
         }
 
     }
+
 
     &__logo {
         width: 5rem;

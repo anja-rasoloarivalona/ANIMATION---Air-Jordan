@@ -1,6 +1,7 @@
 :root {
   --font-primary: sans-serif;
-  --color-primary: red; }
+  --color-primary: #c32630;
+  --color-primary-dark: #551723; }
 
 *,
 *::before,
@@ -23,8 +24,8 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: #c32630;
-  background: linear-gradient(324deg, #c32630 52%, #551723 100%);
+  background: var(--color-primary);
+  background: linear-gradient(324deg, var(--color-primary) 52%, var(--color-primary-dark) 100%);
   background-size: cover;
   background-position: center; }
 
