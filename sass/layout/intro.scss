@@ -16,13 +16,13 @@
         font-weight: 800;
         color: var(--color-red);
         color: rgba(51, 1, 11, 0.153);
+        font-family: 'Work Sans', sans-serif;
       //  z-index: 99;
         z-index: 401;
     }
 
     &__brand {
         z-index: 10000;
-        height: 15rem;
         object-fit: cover;
         position: absolute;
         top: 0;
@@ -30,15 +30,18 @@
         margin: auto;
         display: block;
 
-        &--jordan {           
+        &--jordan {  
+            height: 15rem;         
            left: 0rem;
-           transform: rotateZ(-8deg);
+           transform: rotateZ(-8deg) translate(18rem, -3rem);
         }
 
-        &--nike {           
+        &--nike {  
+            width: 20rem;         
             right: 0rem;
             border: none;
-            fill: white !important;
+            transform: translate(-14rem, -2rem);
+        
         }
     }
 
@@ -49,7 +52,7 @@
         bottom: 9rem;
         top: 0;
         left: 0;
-        right: 0;
+        right: 9rem;
         margin: auto;
         z-index: 10000;
         
@@ -107,29 +110,7 @@
     }
 
 
-    &__logo {
-        width: 5rem;
-        height: 5rem;
-        text-align: center;
-        margin: auto;
-        position: fixed;
-        top: 3rem;
-        left: 3rem;
-        border: 1px solid black;
-        border-radius: 50%;
-        padding: 1rem;
-        z-index: 2000;
-        opacity: 0;
     
-        &__img {
-            width: 100%;
-            object-fit: cover;
-    
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
     
     
 }

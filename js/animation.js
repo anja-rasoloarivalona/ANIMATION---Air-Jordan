@@ -176,5 +176,15 @@ var scene1 = new ScrollMagic.Scene({
 .addTo(controller);
 
    
+  var zero = 0;
+  $(window).on('scroll', function() {
+    $('.nav').toggleClass('nav__hide', $(window).scrollTop() > zero);
+    zero = $(window).scrollTop();
+
+
+  })
+
+
+
 
 });
