@@ -180,9 +180,41 @@ body {
   font-family: verdana;
   padding: 1.5rem; }
 
+.insta {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .insta__title {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    align-self: flex-start;
+    transform: translateX(10rem); }
+  .insta__gallery {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .insta__gallery__item {
+      overflow: hidden; }
+      .insta__gallery__item--1 {
+        width: 40%;
+        height: 60%; }
+      .insta__gallery__item--2 {
+        width: 40%;
+        height: 90%;
+        transform: translate(-8rem, 12rem); }
+    .insta__gallery__img {
+      object-fit: cover;
+      width: 100%; }
+      .insta__gallery__img--1 {
+        align-self: flex-start; }
+
 .test {
-  height: 50vh;
-  width: 100vw; }
+  height: 100vh;
+  width: 100%; }
 
 .jordan {
   width: 100%;

@@ -10,7 +10,19 @@ $( document ).ready(function() {
 
     })
 
+   var gallery1 = new TimelineMax({repeat:-1});
+    //set d
+    gallery1
+    .set('.insta__gallery__img--1', {scale: 1.2})
+    .to('.insta__gallery__img--1', 10, {scale: 1})
+    .to('.insta__gallery__img--1', 10, {scale: 1.2})
 
+    
+    var gallery2 = new TimelineMax({repeat:-1});
+    gallery2
+    .to('.insta__gallery__img--2', 10, {scale: 1.2})
+    .to('.insta__gallery__img--2', 10, {scale: 1})
+ 
     
 
 
@@ -105,7 +117,7 @@ $(function() {
               localStart++;
               counters[id].innerHTML = localStart;
             }
-          }, 10);
+          }, 15);
         }
       
         for (j = 0; j < countersQuantity; j++) {
