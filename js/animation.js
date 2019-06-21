@@ -134,7 +134,6 @@ $(function() {
             var wt = $(window).scrollTop();
             var at = $(this).position().top;
             var dt = at - wt;
-            console.log(dt);
             if( dt >= 0 && dt < 550)
                 $(this).trigger('reached');
         });
