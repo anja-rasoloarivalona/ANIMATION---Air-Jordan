@@ -29,7 +29,8 @@ body {
 .next {
   height: 100vh;
   width: 100%;
-  position: relative; }
+  position: relative;
+  background: var(--color-white); }
   .next__img {
     object-fit: cover;
     position: absolute;
@@ -179,7 +180,7 @@ body {
     bottom: 0rem;
     right: 11rem;
     margin: auto;
-    font-size: 2.6rem;
+    font-size: 2rem;
     line-height: 1.3;
     text-align: start; }
 
@@ -226,17 +227,36 @@ body {
   background-size: cover; }
 
 .insta {
-  height: 120vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
   .insta__title {
-    font-size: 3rem;
-    margin-bottom: 5rem;
+    font-size: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
     align-self: flex-start;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-width: 66rem; }
+    .insta__title span:nth-child(1) {
+      align-self: flex-start; }
+    .insta__title span:nth-child(2) {
+      width: 67%;
+      display: flex;
+      align-self: flex-end;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-12%); }
+      .insta__title span:nth-child(2) div {
+        height: .5rem;
+        width: 35rem;
+        background: black; }
   .insta__gallery {
     width: 90%;
     display: flex;
@@ -250,7 +270,8 @@ body {
       .insta__gallery__item--2 {
         width: 40%;
         height: 90%;
-        transform: translate(-8rem, 12rem); }
+        transform: translate(-8rem, 11rem);
+        z-index: 10; }
     .insta__gallery__img {
       object-fit: cover;
       width: 100%; }
@@ -414,7 +435,8 @@ body {
       width: 50%;
       font-size: 1.3rem;
       line-height: 1.3;
-      margin-left: 9rem; }
+      margin-left: 9rem;
+      color: var(--color-white); }
   .nike__title {
     width: 50%;
     font-size: 3rem;
@@ -423,19 +445,19 @@ body {
     margin-left: 9rem; }
     .nike__title__img {
       position: absolute;
-      top: 4.9rem;
+      top: 11.9rem;
       bottom: 0;
-      left: 2rem;
+      left: 7rem;
       right: 0;
       margin: auto;
-      width: 20rem;
+      width: 21rem;
       object-fit: cover;
       z-index: -1;
       border: none; }
     .nike__title__text {
-      color: white;
       z-index: 20;
-      text-align: center; }
+      text-align: center;
+      color: var(--color-white); }
   .nike__img {
     width: 45%;
     height: 90%;
