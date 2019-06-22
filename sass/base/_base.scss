@@ -5,6 +5,7 @@
     --color-primary-dark: #551723;
     --color-red: #d90c0c;
     --color-grey: #817e7e;
+    --color-white: #f1f1f1;
 }
 
 
@@ -53,29 +54,42 @@ body {
         margin: auto;
        
 
-        &--red{
-            height: 25rem;
-            transform: rotateZ(-2deg);
-            opacity: 0;
+        &--yellow {
+            width: 36rem;
+            transform: rotateZ(-2deg) translateY(-5%);
+            z-index: 2;
+          //  opacity: 0;
           
         }
 
         &--blue {
-            width: 38rem;
-            transform: rotateZ(-2deg);
-            opacity: 0;
+            width: 21rem;
+            transform: rotateZ(-2deg) translateY(-19%);
+        
+
+            // opacity: 0;
         }
 
         &--origin {
-            transform: rotateZ(-4deg);
+            transform: rotateZ(-1deg) translateX(-8%);
             height: 25rem;
-          
+            z-index: 5;
         }
 
         &--multi {
-            height: 21rem;
-            transform: rotateZ(-2deg);
-            opacity: 0;
+            height: 17.5rem;
+            transform: rotateZ(0deg) translateY(-10%);
+            z-index: 2;
+        
+       
+      
+        }
+
+        &--grey{
+            height: 18rem;
+
+            transform: rotateZ(0deg) translateY(-13%);
+       
       
         }
     }

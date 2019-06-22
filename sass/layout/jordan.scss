@@ -25,6 +25,7 @@
             font-size: 1.3rem;
             line-height: 1.3;
             margin-left: 8rem;
+            color: var(--color-white);
         }
     }
 
@@ -34,6 +35,7 @@
         position: relative;
         margin-bottom: 3rem;
         margin-left: 8rem;
+      
       
 
 
@@ -46,16 +48,17 @@
             margin: auto;
             width: 10rem;
             height: 10rem;
-            background-image: url('../img/logo.png');
+            background-image: url('../img/jordan.png');
             background-size: cover;
             background-position: center;
             z-index: -1;
+            transform: rotateZ(-8deg) ;
  
         
         } 
 
         &__text {
-            color: white;    
+            color: var(--color-white);    
             z-index: 20; 
             text-align: center;
     
@@ -73,5 +76,6 @@
         z-index: 1;
         box-shadow: 10px 10px 24px -12px rgba(8,8,8,1);
         border-radius: 3px;
+       
         }
 }
