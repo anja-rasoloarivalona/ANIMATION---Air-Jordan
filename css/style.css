@@ -25,6 +25,39 @@ body {
 ::-webkit-scrollbar {
   display: none; }
 
+.next {
+  height: 100vh;
+  width: 100%;
+  position: relative; }
+  .next__img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    .next__img--red {
+      height: 25rem;
+      transform: rotateZ(-2deg);
+      opacity: 0; }
+    .next__img--blue {
+      width: 38rem;
+      transform: rotateZ(-2deg);
+      opacity: 0; }
+    .next__img--origin {
+      transform: rotateZ(-4deg);
+      height: 25rem; }
+    .next__img--multi {
+      height: 21rem;
+      transform: rotateZ(-2deg);
+      opacity: 0; }
+
+.test {
+  height: 100vh;
+  width: 100%;
+  background: yellow; }
+
 .layer {
   width: 100%;
   height: 100%;
@@ -40,7 +73,7 @@ body {
   background-position: center;
   width: 100vw;
   height: 100vh;
-  display: none;
+  display: flex;
   position: fixed;
   z-index: 400; }
   .loader__bar {
@@ -189,7 +222,7 @@ body {
   background-size: cover; }
 
 .insta {
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -227,7 +260,7 @@ body {
   overflow: hidden; }
   .intro__bgtext {
     position: fixed;
-    top: 20rem;
+    top: 27rem;
     bottom: 0%;
     left: 0;
     right: 0;
@@ -235,7 +268,6 @@ body {
     font-size: 13rem;
     font-weight: 800;
     color: var(--color-red);
-    color: rgba(51, 1, 11, 0.153);
     font-family: 'Work Sans', sans-serif;
     z-index: 401; }
   .intro__brand {
@@ -245,21 +277,22 @@ body {
     top: 0;
     bottom: 0;
     margin: auto;
-    display: block; }
+    display: block;
+    opacity: 0; }
     .intro__brand--jordan {
       height: 15rem;
       left: 0rem;
-      transform: rotateZ(-8deg) translate(18rem, -3rem); }
+      transform: rotateZ(-8deg) translate(21rem, 2rem); }
     .intro__brand--nike {
       width: 20rem;
       right: 0rem;
       border: none;
-      transform: translate(-14rem, -2rem); }
+      transform: translate(-19rem, 3rem); }
   .intro__shoe {
     width: 55rem;
     object-fit: cover;
     position: fixed;
-    bottom: 9rem;
+    bottom: 1rem;
     top: 0;
     left: 0;
     right: 9rem;

@@ -7,7 +7,7 @@
 
     &__bgtext {
         position: fixed;
-        top: 20rem;
+        top: 27rem;
         bottom: 0%;
         left: 0;
         right: 0;
@@ -15,7 +15,7 @@
         font-size: 13rem;
         font-weight: 800;
         color: var(--color-red);
-        color: rgba(51, 1, 11, 0.153);
+       // color: rgba(51, 1, 11, 0.153);
         font-family: 'Work Sans', sans-serif;
       //  z-index: 99;
         z-index: 401;
@@ -29,27 +29,30 @@
         bottom: 0;
         margin: auto;
         display: block;
+        opacity: 0;
 
         &--jordan {  
             height: 15rem;         
            left: 0rem;
-           transform: rotateZ(-8deg) translate(18rem, -3rem);
+           transform: rotateZ(-8deg) translate(21rem, 2rem);
         }
 
         &--nike {  
-            width: 20rem;         
+            width: 20rem;
             right: 0rem;
             border: none;
-            transform: translate(-14rem, -2rem);
-        
+            transform: translate(-19rem, 3rem);
         }
+        
+        
+        
     }
 
     &__shoe {
         width: 55rem;
         object-fit: cover;
         position: fixed;
-        bottom: 9rem;
+        bottom: 1rem;
         top: 0;
         left: 0;
         right: 9rem;
