@@ -209,19 +209,23 @@ var scene1 = new ScrollMagic.Scene({
   var next = new TimelineMax();
   //set d
   next
-  .set('.next__img--origin', { scale: 6, autoAlpha: 0, y: '20%'})
+  .set('.next__img--origin', { scale: 4, autoAlpha: 0, y: '20%'})
   .set('.next__img--yellow', {autoAlpha: 0, x: '-20%'})
   .set('.next__img--blue', {autoAlpha: 0, x: '-60%'})
   .set('.next__img--multi', {autoAlpha: 0, x: '30%'})
   .set('.next__img--grey', {autoAlpha: 0, x: '70%'})
+  .set('.next__text div', {y: '-200%', autoAlpha: 0})
 
+  
   .to('.next__img--origin', 1, {y: '-480%', scale: 3, ease:Power1.easeIn, autoAlpha: 1, opacity: .8})
-  .to('.next__img--origin', 1, {y: '-0%', scale: 1, ease:Power1.easeInOut, opacity: 1},'-=.5')
+  .to('.next__img--origin', 1, {y: '-0%', scale: 1, ease:Power1.easeInOut, opacity: 1},'-=.8')
 
   .to('.next__img--yellow', 1, {x: '-50%', ease:Power1.easeInOut, autoAlpha: 1})
   .to('.next__img--blue', 1, {x: '-150%', ease:Power1.easeInOut, autoAlpha: 1}, '-=.5')
   .to('.next__img--multi', 1, {x: '83%', ease:Power1.easeInOut, autoAlpha: 1}, '-=1.5')
   .to('.next__img--grey', 1, {x: '137%', ease:Power1.easeInOut, autoAlpha: 1}, '-=1')
+  .to('.next__text div', .7, {y: '5%', ease:Power1.easeInOut, autoAlpha: 1},'-=.5')
+  .to('.next__text div', .7, {y: '0%', ease:Power1.easeIn})
  
 
 

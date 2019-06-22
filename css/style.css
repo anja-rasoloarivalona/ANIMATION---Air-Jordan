@@ -31,6 +31,20 @@ body {
   width: 100%;
   position: relative;
   background: var(--color-white); }
+  .next div {
+    font-size: 11rem;
+    font-weight: 700;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: absolute;
+    bottom: 8rem;
+    transform: rotateX(31deg);
+    left: 0;
+    right: 0;
+    margin: auto; }
+    .next div div {
+      text-shadow: 6px 11px 17px var(--color-primary-dark);
+      color: var(--color-white); }
   .next__img {
     object-fit: cover;
     position: absolute;
