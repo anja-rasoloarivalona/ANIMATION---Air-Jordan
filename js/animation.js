@@ -34,7 +34,12 @@ $( document ).ready(function() {
     gallery2
     .to('.insta__gallery__img--2', 10, {scale: 1.2})
     .to('.insta__gallery__img--2', 10, {scale: 1})
- 
+
+    var edition = new TimelineMax();
+    edition
+    .set('.edition__text div', {y: '-100%', autoAlpha: 0})
+    .to('.edition__text div', 1, {rotationX: '0deg',autoAlpha: 1, y:'0%'})
+
     
 
 
