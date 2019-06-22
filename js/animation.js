@@ -173,7 +173,7 @@ var scene1 = new ScrollMagic.Scene({
 })
 .reverse(false)
 .setTween(scrolljordan )
-.addIndicators()
+//.addIndicators()
 .addTo(controller);
 
 
@@ -231,6 +231,7 @@ var scene1 = new ScrollMagic.Scene({
   .to('.next__img--grey', 1, {x: '137%', ease:Power1.easeInOut, autoAlpha: 1}, '-=1')
   .to('.next__text div', .7, {y: '5%', ease:Power1.easeInOut, autoAlpha: 1},'-=.5')
   .to('.next__text div', .7, {y: '0%', ease:Power1.easeIn})
+
  
 
 
@@ -246,8 +247,42 @@ var scene1 = new ScrollMagic.Scene({
   })
   .reverse(false)
   .setTween(next)
-  .addIndicators()
+ // .addIndicators()
   .addTo(controller);
 
+  var current = 'yellow';
+
+    $('.nextGallery__control__item--blue').on('click', function() {
+      var next = new TimelineMax();
+
+      if(current !== 'blue') {
+        next
+        .to('.nextGallery__img--blue', .5, { autoAlpha: 1, y: '0%'})
+        .to('.nextGallery__img--' + current , .5, {y: '100%'}, '-=.5')
+        .to('.nextGallery__img--' + current , .1, {y: '-100%', opacity: '0'});
+  
+        return current = 'blue';  
+      }
+    
+
+    })
+
+    $('.nextGallery__control__item--yellow').on('click', function() {
+      var next = new TimelineMax();
+
+      if(current !== 'yellow') {
+
+        next
+        .to('.nextGallery__img--yellow', .5, { autoAlpha: 1, y: '0%'})
+        .to('.nextGallery__img--' + current , .5, {y: '100%'}, '-=.5')
+        .to('.nextGallery__img--' + current , .1, {y: '-100%', opacity: '0'});
+
+        return current = 'yellow';   
+      }
+     
+      
+
+      
+    })
 
 });

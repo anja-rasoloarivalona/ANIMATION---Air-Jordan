@@ -21,7 +21,8 @@ html {
 body {
   font-family: var(--font-primary);
   text-align: center;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  width: 100vw; }
 
 ::-webkit-scrollbar {
   display: none; }
@@ -30,7 +31,8 @@ body {
   height: 110vh;
   width: 100%;
   position: relative;
-  background: var(--color-white); }
+  background: var(--color-white);
+  z-index: 4; }
   .next div {
     font-size: 11rem;
     font-weight: 700;
@@ -72,10 +74,60 @@ body {
       height: 18rem;
       transform: rotateZ(0deg) translateY(-17%); }
 
-.test {
+.nextGallery {
   height: 100vh;
   width: 100%;
-  background: yellow; }
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  background: white; }
+  .nextGallery__control {
+    width: 30vw;
+    height: 5rem;
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    .nextGallery__control__item {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%; }
+      .nextGallery__control__item--blue {
+        background: #1d1dca; }
+      .nextGallery__control__item--yellow {
+        background: yellow; }
+      .nextGallery__control__item--grey {
+        background: grey; }
+      .nextGallery__control__item--red {
+        background: red; }
+  .nextGallery__item {
+    width: 40rem;
+    height: 22.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    background: var(--color-primary);
+    box-shadow: 10px 10px 24px -12px #080808; }
+  .nextGallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    background: blue; }
+    .nextGallery__img--yellow {
+      z-index: 5; }
+    .nextGallery__img--blue {
+      transform: translateY(-100%);
+      z-index: 6;
+      opacity: 0; }
 
 .layer {
   width: 100%;
@@ -133,7 +185,7 @@ body {
   height: 7rem;
   background: var(--color-white);
   z-index: 20000;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,11 +292,13 @@ body {
   padding: 1.5rem; }
 
 .footer {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-image: url("../img/home.jpg");
+  background: var(--color-primary);
+  background: linear-gradient(324deg, var(--color-primary) 52%, var(--color-primary-dark) 100%);
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  display: block; }
 
 .insta {
   height: 100vh;
