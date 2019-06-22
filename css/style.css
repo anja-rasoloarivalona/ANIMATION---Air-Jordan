@@ -46,16 +46,16 @@ body {
       width: 21rem;
       transform: rotateZ(-2deg) translateY(-19%); }
     .next__img--origin {
-      transform: rotateZ(-1deg) translateX(-8%);
+      transform: rotateZ(-1deg) translateX(-12%);
       height: 25rem;
       z-index: 5; }
     .next__img--multi {
-      height: 17.5rem;
-      transform: rotateZ(0deg) translateY(-10%);
+      height: 17rem;
+      transform: rotateZ(0deg) translateY(-9%);
       z-index: 2; }
     .next__img--grey {
       height: 18rem;
-      transform: rotateZ(0deg) translateY(-13%); }
+      transform: rotateZ(0deg) translateY(-17%); }
 
 .test {
   height: 100vh;
@@ -77,7 +77,7 @@ body {
   background-position: center;
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: none;
   position: fixed;
   z-index: 400; }
   .loader__bar {

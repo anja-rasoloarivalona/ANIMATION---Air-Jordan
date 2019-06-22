@@ -71,14 +71,14 @@ body {
         }
 
         &--origin {
-            transform: rotateZ(-1deg) translateX(-8%);
+            transform: rotateZ(-1deg) translateX(-12%);
             height: 25rem;
             z-index: 5;
         }
 
         &--multi {
-            height: 17.5rem;
-            transform: rotateZ(0deg) translateY(-10%);
+            height: 17rem;
+            transform: rotateZ(0deg) translateY(-9%);
             z-index: 2;
         
        
@@ -88,7 +88,7 @@ body {
         &--grey{
             height: 18rem;
 
-            transform: rotateZ(0deg) translateY(-13%);
+            transform: rotateZ(0deg) translateY(-17%);
        
       
         }
