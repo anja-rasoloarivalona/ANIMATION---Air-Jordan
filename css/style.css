@@ -28,7 +28,7 @@ body {
   display: none; }
 
 .next {
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   background: var(--color-white);
@@ -39,7 +39,7 @@ body {
     transform-style: preserve-3d;
     perspective: 1000px;
     position: absolute;
-    bottom: 8rem;
+    bottom: 5rem;
     transform: rotateX(31deg);
     left: 0;
     right: 0;
@@ -87,7 +87,7 @@ body {
     width: 30vw;
     height: 5rem;
     position: absolute;
-    top: 5.5rem;
+    top: 10rem;
     left: 0;
     right: 0;
     margin: auto;
@@ -298,7 +298,20 @@ body {
   background: linear-gradient(324deg, var(--color-primary) 52%, var(--color-primary-dark) 100%);
   background-position: center;
   background-size: cover;
-  display: block; }
+  display: block;
+  position: relative; }
+  .footer__textBG {
+    position: absolute;
+    top: 27rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 13rem;
+    font-weight: 800;
+    color: rgba(51, 1, 11, 0.153);
+    font-family: 'Work Sans', sans-serif;
+    z-index: 99; }
 
 .insta {
   height: 100vh;
@@ -341,11 +354,12 @@ body {
       box-shadow: 10px 10px 24px -12px #080808; }
       .insta__gallery__item--1 {
         width: 40%;
-        height: 60%; }
+        height: 60%;
+        transform: translateY(-7rem); }
       .insta__gallery__item--2 {
         width: 40%;
         height: 90%;
-        transform: translate(-8rem, 11rem);
+        transform: translate(-8rem, 13rem);
         z-index: 10; }
     .insta__gallery__img {
       object-fit: cover;
