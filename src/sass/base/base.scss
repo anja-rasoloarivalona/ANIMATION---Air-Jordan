@@ -45,25 +45,27 @@ body {
     background: var(--color-white);
     z-index: 4;
 
-    & div {
+    &__text {
         font-size: 11rem;
         font-weight: 700;
         transform-style: preserve-3d;
         perspective: 1000px;
         position: absolute;
         bottom: 5rem;
-        transform: rotateX(31deg);
+     
         left: 0;
         right: 0;
-        margin: auto;
-        
-
-        & div {
-            text-shadow: 6px 11px 17px var(--color-primary-dark);
-            color: var(--color-white);
-        }
-        
+        margin: auto; 
     }
+
+    &__title {
+        text-shadow: 6px 11px 17px var(--color-primary-dark);
+         color: var(--color-white);
+         transform: rotateX(65deg);
+
+    }
+
+
  
 
     &__img {
@@ -117,88 +119,6 @@ body {
     }
 }
 
-.nextGallery {
-
-    height: 100vh;
-    width: 100%;
-    
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-    z-index: 5;
-    background: white;
-
-
-    &__control {
-        position: absolute;
-        top: 10rem;
-        right: 5rem;
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-   
-
-        &__item {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            margin: 1rem 0;
-
-            &--blue {
-                background: rgb(29, 29, 202);
-            }
-
-            &--yellow {
-                background: yellow;
-            }
-
-            &--grey {
-                background: grey;
-
-            }
-
-            &--red {
-                background: red;
-            }
-        }
-
-    }
-
-
-    &__item { 
-        position: absolute;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        margin: 0 1rem;
-        background: var(--color-primary);
-        box-shadow: 10px 10px 24px -12px rgba(8,8,8,1);      
-        margin: auto;
-
-
-        &--1 {
-            left: 9rem;
-            width: 45rem;
-            height: 30rem;
-            bottom: 5rem;
-            z-index: 2;
-            transform: rotate(10deg);
-            transform-origin: top left;
-        }
-
-        &--2 {
-            top: -2rem;
-            left: 15rem;
-            height: 52.5rem;
-            width: 45rem;
-            z-index: 1;
-           
-
-        }
-    }
 
 
 
@@ -206,34 +126,15 @@ body {
 
 
 
-    &__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;    
-        position: absolute;
-        background: blue;
-       
 
-
-        &--yellow {
-            z-index: 5;
-         
-       
-        }
-
-        &--blue {
-            transform: translateY(-100%);
-            z-index: 6;
-            opacity: 0;
-        }
 
        
 
       
 
-}
 
-}
+
+
 
 
 
