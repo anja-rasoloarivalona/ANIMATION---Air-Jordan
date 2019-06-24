@@ -17,19 +17,30 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media screen and (max-width: 850px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: var(--font-primary);
-  text-align: center;
-  overflow-x: hidden;
-  width: 100vw; }
+  overflow-x: hidden; }
+
+.container {
+  height: 100vw;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 22vw) 1fr;
+  grid-template-rows: max-content;
+  grid-auto-rows: max-content; }
 
 ::-webkit-scrollbar {
   display: none; }
 
 .next {
+  grid-column: 1 / -1;
   height: 100vh;
-  width: 100%;
+  width: 105%;
   position: relative;
   background: var(--color-white);
   z-index: 4; }
@@ -42,7 +53,8 @@ body {
     bottom: 5rem;
     left: 0;
     right: 0;
-    margin: auto; }
+    margin: auto;
+    display: none; }
   .next__title {
     text-shadow: 6px 11px 17px var(--color-primary-dark);
     color: var(--color-white);
@@ -75,6 +87,7 @@ body {
       transform: rotateZ(0deg) translateY(-17%); }
 
 .layer {
+  grid-column: 1 / -1;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -84,6 +97,7 @@ body {
   background-position: center; }
 
 .loader {
+  grid-column: 1 / -1;
   background-image: url("../img/bg.jpg");
   background-size: cover;
   background-position: center;
@@ -127,10 +141,10 @@ body {
 
 .nav {
   position: fixed;
+  width: 100%;
   height: 7rem;
   background: var(--color-white);
   z-index: 20000;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,13 +155,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 18vw;
+    width: 30rem;
     height: 100%;
     list-style: none;
     margin: 0 8rem; }
+    @media screen and (max-width: 651px) {
+      .nav__list {
+        margin: 0 2.5rem; } }
     .nav__list__item {
       margin: 0 1rem;
-      min-width: 9rem;
+      width: 100%;
       height: 40%;
       display: flex;
       align-items: center;
@@ -180,6 +197,7 @@ body {
         cursor: pointer; }
 
 .details {
+  grid-column: 2 / 6;
   width: 100%;
   height: 100vh;
   position: relative; }
@@ -200,7 +218,8 @@ body {
   width: 100%; }
 
 .edition {
-  width: 100%;
+  grid-column: 1/ -1;
+  width: 105%;
   height: 50vh;
   background-image: linear-gradient(324deg, rgba(195, 38, 49, 0.432) 52%, rgba(195, 38, 49, 0.432) 100%), url("../img/bg.png");
   background-size: cover;
@@ -237,7 +256,8 @@ body {
   padding: 1.5rem; }
 
 .footer {
-  width: 100vw;
+  grid-column: 1 / -1;
+  width: 105%;
   height: 100vh;
   background: linear-gradient(324deg, var(--color-primary) 52%, var(--color-primary-dark) 100%);
   background-position: center;
@@ -268,7 +288,8 @@ body {
     font-weight: 800;
     color: rgba(51, 1, 11, 0.153);
     font-family: 'Work Sans', sans-serif;
-    z-index: 99; }
+    z-index: 99;
+    display: none; }
   .footer__social-media {
     width: 97%;
     margin: auto;
@@ -314,8 +335,9 @@ body {
     box-shadow: 10px 10px 24px -12px #080808; }
 
 .insta {
+  grid-column: 2 / 3;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -368,14 +390,21 @@ body {
         align-self: flex-start; }
 
 .intro {
-  width: 100vw;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden; }
   .intro__bgtext {
+    height: 14rem;
     position: fixed;
-    top: 27rem;
-    bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
@@ -383,7 +412,17 @@ body {
     font-weight: 800;
     color: var(--color-red);
     font-family: 'Work Sans', sans-serif;
-    z-index: 401; }
+    z-index: 401;
+    padding: 0 1rem; }
+    @media screen and (max-width: 949px) {
+      .intro__bgtext {
+        font-size: 11rem; } }
+    @media screen and (max-width: 654px) {
+      .intro__bgtext {
+        font-size: 9rem; } }
+    @media screen and (max-width: 510px) {
+      .intro__bgtext {
+        font-size: 6rem; } }
   .intro__brand {
     z-index: 400;
     object-fit: cover;
@@ -395,28 +434,6 @@ body {
     border-radius: 50%;
     overflow: hidden;
     background: #000000; }
-    .intro__brand__jordan {
-      left: 21rem;
-      width: 10rem;
-      height: 10rem;
-      padding: 2rem;
-      position: fixed; }
-      .intro__brand__jordan__img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%; }
-    .intro__brand__nike {
-      width: 10rem;
-      height: 10rem;
-      right: 30rem;
-      bottom: 0rem;
-      padding: 2rem; }
-      .intro__brand__nike__img {
-        object-fit: cover;
-        width: 100%;
-        height: 80%;
-        background: white;
-        transform: translate(0.7rem, 0.8rem); }
   .intro__shoe {
     width: 55rem;
     object-fit: cover;
@@ -462,38 +479,41 @@ body {
     opacity: 1; } }
 
 .jordan {
-  width: 100%;
+  grid-column: 2 / 6;
+  grid-row: 2 / 3;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center; }
   .jordan__text {
-    width: 50%;
-    height: 90%;
+    height: 80vh;
+    width: 100%;
     margin: auto;
     z-index: 2;
     display: flex;
     font-weight: 600;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
     .jordan__text p {
       text-align: center;
-      width: 50%;
+      width: 70%;
       font-size: 1.3rem;
       line-height: 1.3;
-      margin-left: 8rem;
       color: var(--color-white); }
   .jordan__title {
-    width: 50%;
+    padding: 1rem 0;
     font-size: 4rem;
     position: relative;
-    margin-bottom: 3rem;
-    margin-left: 8rem; }
+    margin-bottom: 3rem; }
     .jordan__title__brand {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       z-index: -2;
       object-fit: cover;
-      top: 1rem;
-      bottom: 11rem;
       margin: auto;
       display: block;
       border-radius: 50%;
@@ -501,10 +521,7 @@ body {
       background: #000000;
       width: 10rem;
       height: 10rem;
-      left: 22rem;
-      bottom: 13rem;
-      padding: 2rem;
-      position: fixed; }
+      padding: 2rem; }
       .jordan__title__brand__img {
         object-fit: cover;
         width: 100%;
@@ -515,8 +532,8 @@ body {
       text-align: center;
       z-index: 401; }
   .jordan__img {
-    width: 45%;
-    height: 90%;
+    width: 120%;
+    height: 95%;
     margin: auto;
     background-image: linear-gradient(324deg, rgba(195, 38, 49, 0.432) 52%, rgba(195, 38, 49, 0.432) 100%), url("../img/jordan.jpg");
     background-size: cover;
@@ -524,16 +541,21 @@ body {
     z-index: 1;
     box-shadow: 10px 10px 24px -12px #080808;
     border-radius: 3px; }
+    @media screen and (max-width: 980px) {
+      .jordan__img {
+        position: absolute;
+        width: 90%; } }
 
 .nike {
-  width: 100%;
+  grid-column: 2 / 6;
+  grid-row: 3/ 4;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center; }
   .nike__text {
-    width: 50%;
-    height: 90%;
+    height: 80vh;
+    width: 100%;
     margin: auto;
     z-index: 2;
     display: flex;
@@ -549,41 +571,40 @@ body {
       margin-left: 9rem;
       color: var(--color-white); }
   .nike__title {
-    width: 50%;
     font-size: 2rem;
     position: relative;
     margin-bottom: 6rem;
     margin-left: 9rem; }
     .nike__title__brand {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       z-index: -2;
       object-fit: cover;
-      top: .3rem;
-      bottom: 11rem;
       margin: auto;
-      display: block;
       border-radius: 50%;
       overflow: hidden;
       background: #000000;
       width: 10rem;
       height: 10rem;
-      right: 22rem;
-      bottom: 13rem;
-      padding: 2rem;
-      position: fixed; }
+      padding: 1rem; }
       .nike__title__brand__img {
         object-fit: cover;
-        width: 160%;
+        width: 100%;
         height: 80%;
-        background: white;
-        transform: translate(-1.2rem, 2rem); }
+        background: var(--color-grey);
+        transform: translate(1rem, 1rem); }
     .nike__title__text {
       z-index: 20;
       text-align: center;
       color: var(--color-white);
-      transform: translate(1.4rem, 0.2rem); }
+      font-size: 4rem;
+      font-weight: 600; }
   .nike__img {
-    width: 45%;
-    height: 90%;
+    width: 120%;
+    height: 95%;
     margin: auto;
     background-image: linear-gradient(324deg, rgba(195, 38, 49, 0.432) 52%, rgba(195, 38, 49, 0.432) 100%), url("../img/brook.png");
     background-size: cover;
@@ -591,3 +612,7 @@ body {
     z-index: 1;
     box-shadow: 10px 10px 24px -12px #080808;
     border-radius: 3px; }
+    @media screen and (max-width: 980px) {
+      .nike__img {
+        position: absolute;
+        width: 90%; } }
