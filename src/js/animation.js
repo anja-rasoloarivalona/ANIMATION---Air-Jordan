@@ -249,7 +249,7 @@ var scene1 = new ScrollMagic.Scene({
   .setTween(next)
  // .addIndicators()
   .addTo(controller);
-
+/*
   var current = 'yellow';
 
     $('.nextGallery__control__item--blue').on('click', function() {
@@ -283,6 +283,6 @@ var scene1 = new ScrollMagic.Scene({
       
 
       
-    })
+    })*/
 
 });
