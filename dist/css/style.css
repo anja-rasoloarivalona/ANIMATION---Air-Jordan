@@ -23,7 +23,8 @@ html {
 
 body {
   font-family: var(--font-primary);
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  text-align: center; }
 
 .container {
   height: 100vw;
@@ -43,7 +44,8 @@ body {
   width: 105%;
   position: relative;
   background: var(--color-white);
-  z-index: 4; }
+  z-index: 4;
+  overflow: hidden; }
   .next__text {
     font-size: 11rem;
     font-weight: 700;
@@ -335,7 +337,7 @@ body {
     box-shadow: 10px 10px 24px -12px #080808; }
 
 .insta {
-  grid-column: 2 / 3;
+  grid-column: 2 / 6;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -444,6 +446,10 @@ body {
     right: 9rem;
     margin: auto;
     z-index: 10000; }
+    @media screen and (max-width: 980px) {
+      .intro__shoe {
+        right: 0;
+        bottom: 0rem; } }
   .intro__add {
     position: absolute;
     font-size: 13rem;
@@ -544,7 +550,7 @@ body {
     @media screen and (max-width: 980px) {
       .jordan__img {
         position: absolute;
-        width: 90%; } }
+        width: 96%; } }
 
 .nike {
   grid-column: 2 / 6;
@@ -604,7 +610,7 @@ body {
       font-weight: 600; }
   .nike__img {
     width: 120%;
-    height: 95%;
+    height: 100%;
     margin: auto;
     background-image: linear-gradient(324deg, rgba(195, 38, 49, 0.432) 52%, rgba(195, 38, 49, 0.432) 100%), url("../img/brook.png");
     background-size: cover;
@@ -615,4 +621,4 @@ body {
     @media screen and (max-width: 980px) {
       .nike__img {
         position: absolute;
-        width: 90%; } }
+        width: 96%; } }

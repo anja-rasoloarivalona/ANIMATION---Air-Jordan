@@ -32,6 +32,7 @@ html {
 body {
     font-family: var(--font-primary);
     overflow-x: hidden;
+    text-align: center;
 
 
   //  overflow-y: hidden; 
@@ -46,6 +47,7 @@ body {
     grid-template-columns: 1fr repeat(4, 22vw) 1fr;
     grid-template-rows: max-content;
     grid-auto-rows: max-content;
+  
 }
 
 
@@ -62,6 +64,7 @@ body {
     position: relative;
     background: var(--color-white);
     z-index: 4;
+    overflow: hidden;
 
     &__text {
         font-size: 11rem;

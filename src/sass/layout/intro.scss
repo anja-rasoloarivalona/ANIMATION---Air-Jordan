@@ -56,6 +56,7 @@
     }
 
     &__shoe {
+     
         width: 55rem;
         object-fit: cover;
         position: fixed;
@@ -65,6 +66,11 @@
         right: 9rem;
         margin: auto;
         z-index: 10000;
+
+        @media screen and (max-width: 980px) {
+            right: 0;
+            bottom: 0rem;
+        }
 
   
         

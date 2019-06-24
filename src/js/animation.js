@@ -21,11 +21,21 @@ $(document).ready(function() {
 
 
   /*-------------SCROLLING SHOE AND BG---------------------*/
+  
+  var width = $(window).width();
+
+  var query;
+
+  if(width <= 980) {
+      query = '0%'
+  } else {
+    query = '-45%'
+  }
 
   var a = new TimelineMax();
     a.to(".intro__bgtext", 1, { autoAlpha: 0 })
       .to(".layer", 0.5, { opacity: 0 })
-      .to(".intro__shoe", 1, { x: "-45%" }, "-=.5")
+     .to(".intro__shoe", 1, { x: query }, "-=.5")
       .to(".intro__shoe", 0.5, { position: "absolute" });
 
     var controller = new ScrollMagic.Controller();
@@ -105,8 +115,8 @@ $(document).ready(function() {
   });
 
   var next = new TimelineMax();
-  next;
-  /*.set('.next__img--origin', { scale: 4, autoAlpha: 0, y: '20%'})
+  next
+  .set('.next__img--origin', { scale: 4, autoAlpha: 0, y: '20%'})
   .set('.next__img--yellow', {autoAlpha: 0, x: '-20%'})
   .set('.next__img--blue', {autoAlpha: 0, x: '-60%'})
   .set('.next__img--multi', {autoAlpha: 0, x: '30%'})
@@ -125,7 +135,7 @@ $(document).ready(function() {
   .to('.next__title', .7, {y: '0%', ease:Power1.easeIn})
 
  
-*/
+
 
   var controller = new ScrollMagic.Controller();
   var scene4 = new ScrollMagic.Scene({
