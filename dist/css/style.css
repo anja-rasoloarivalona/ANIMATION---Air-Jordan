@@ -1,0 +1,593 @@
+:root {
+  --font-primary: sans-serif;
+  --color-primary: #c32630;
+  --color-primary-dark: #551723;
+  --color-red: #d90c0c;
+  --color-grey: #817e7e;
+  --color-white: #f1f1f1; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-primary);
+  text-align: center;
+  overflow-x: hidden;
+  width: 100vw; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+.next {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: var(--color-white);
+  z-index: 4; }
+  .next__text {
+    font-size: 11rem;
+    font-weight: 700;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    right: 0;
+    margin: auto; }
+  .next__title {
+    text-shadow: 6px 11px 17px var(--color-primary-dark);
+    color: var(--color-white);
+    transform: rotateX(65deg); }
+  .next__img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    .next__img--yellow {
+      width: 36rem;
+      transform: rotateZ(-2deg) translateY(-5%);
+      z-index: 2; }
+    .next__img--blue {
+      width: 21rem;
+      transform: rotateZ(-2deg) translateY(-19%); }
+    .next__img--origin {
+      transform: rotateZ(-1deg) translateX(-12%);
+      height: 25rem;
+      z-index: 5; }
+    .next__img--multi {
+      height: 17rem;
+      transform: rotateZ(0deg) translateY(-9%);
+      z-index: 2; }
+    .next__img--grey {
+      height: 18rem;
+      transform: rotateZ(0deg) translateY(-17%); }
+
+.layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: var(--color-primary);
+  background: linear-gradient(324deg, var(--color-primary) 52%, var(--color-primary-dark) 100%);
+  background-size: cover;
+  background-position: center; }
+
+.loader {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  z-index: 400; }
+  .loader__bar {
+    height: .5rem;
+    width: 30%;
+    background: #e4d9de;
+    box-shadow: 0 0 1rem var(--color-grey);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0rem;
+    top: 15rem;
+    margin: auto; }
+    .loader__bar__inner {
+      height: 100%;
+      background: var(--color-red);
+      width: 0%;
+      left: 0;
+      position: absolute; }
+    .loader__bar__indicator {
+      position: absolute;
+      left: -.5rem;
+      height: 6rem;
+      top: 0;
+      bottom: 0;
+      width: 6em;
+      margin: auto;
+      border: 1px solid black;
+      background: var(--color-grey);
+      border-radius: 50px;
+      padding: .4rem; }
+      .loader__bar__indicator__img {
+        width: 80%;
+        object-fit: cover; }
+
+.nav {
+  position: fixed;
+  height: 7rem;
+  background: var(--color-white);
+  z-index: 20000;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in; }
+  .nav__hide {
+    transform: translateY(-7rem); }
+  .nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18vw;
+    height: 100%;
+    list-style: none;
+    margin: 0 8rem; }
+    .nav__list__item {
+      margin: 0 1rem;
+      min-width: 9rem;
+      height: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .nav__list__item a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        color: var(--color-primary-dark); }
+  .nav__logo {
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 1rem;
+    z-index: 2000; }
+    .nav__logo__img {
+      width: 100%;
+      object-fit: cover; }
+      .nav__logo__img:hover {
+        cursor: pointer; }
+
+.details {
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+  .details__text {
+    position: absolute;
+    width: 40%;
+    height: 45%;
+    top: 0;
+    bottom: 0rem;
+    right: 11rem;
+    margin: auto;
+    font-size: 2rem;
+    line-height: 1.3;
+    text-align: start; }
+
+.test {
+  height: 100vh;
+  width: 100%; }
+
+.edition {
+  width: 100%;
+  height: 50vh;
+  background-image: linear-gradient(324deg, rgba(195, 38, 49, 0.432) 52%, rgba(195, 38, 49, 0.432) 100%), url("../img/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .edition__text {
+    font-size: 6rem;
+    font-weight: 600;
+    margin-right: 3rem;
+    color: var(--color-white);
+    transform-style: preserve-3d;
+    perspective: 1000px; }
+    .edition__text div {
+      transform: rotateX(90deg); }
+
+.count {
+  box-shadow: 10px 10px 24px -12px #080808;
+  width: 12rem;
+  height: 12rem;
+  font-size: 6rem;
+  background-image: linear-gradient(324deg, rgba(29, 24, 24, 0.432) 52%, rgba(29, 24, 24, 0.432) 100%), url("../img/home.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  font-weight: bold;
+  font-family: verdana;
+  padding: 1.5rem; }
+
+.footer {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(324deg, var(--color-primary) 52%, var(--color-primary-dark) 100%);
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .footer__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 82%; }
+  .footer__list {
+    list-style: none;
+    width: 15rem;
+    padding: 1rem 2rem; }
+    .footer__list__item {
+      margin: 1rem 0;
+      padding: .5rem 0;
+      font-size: 1.3rem;
+      color: var(--color-white); }
+  .footer__textBG {
+    position: absolute;
+    top: 27rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 13rem;
+    font-weight: 800;
+    color: rgba(51, 1, 11, 0.153);
+    font-family: 'Work Sans', sans-serif;
+    z-index: 99; }
+  .footer__social-media {
+    width: 97%;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 10%;
+    border-top: 0.1px solid var(--color-grey);
+    border-bottom: 0.1px solid var(--color-grey); }
+    .footer__social-media__icon {
+      border: none;
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+      padding: auto;
+      margin: 0 1rem;
+      align-self: center;
+      fill: wheat; }
+  .footer__bottom {
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .footer__bottom small {
+      margin-left: 5rem;
+      color: var(--color-white); }
+    .footer__bottom__links {
+      width: 30%;
+      display: flex;
+      justify-content: space-around;
+      margin-right: 4rem;
+      color: var(--color-white); }
+  .footer__cta {
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: salmon;
+    z-index: 10;
+    box-shadow: 10px 10px 24px -12px #080808; }
+
+.insta {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .insta__title {
+    font-size: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    align-self: flex-start;
+    transform: translateX(10rem);
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-width: 66rem; }
+    .insta__title span:nth-child(1) {
+      align-self: flex-start; }
+    .insta__title span:nth-child(2) {
+      width: 67%;
+      display: flex;
+      align-self: flex-end;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-12%); }
+      .insta__title span:nth-child(2) div {
+        height: .5rem;
+        width: 35rem;
+        background: black; }
+  .insta__gallery {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .insta__gallery__item {
+      overflow: hidden;
+      box-shadow: 10px 10px 24px -12px #080808; }
+      .insta__gallery__item--1 {
+        width: 40%;
+        height: 60%;
+        transform: translateY(-7rem); }
+      .insta__gallery__item--2 {
+        width: 40%;
+        height: 90%;
+        transform: translate(-8rem, 7rem);
+        z-index: 10; }
+    .insta__gallery__img {
+      object-fit: cover;
+      width: 100%; }
+      .insta__gallery__img--1 {
+        align-self: flex-start; }
+
+.intro {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; }
+  .intro__bgtext {
+    position: fixed;
+    top: 27rem;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 13rem;
+    font-weight: 800;
+    color: var(--color-red);
+    font-family: 'Work Sans', sans-serif;
+    z-index: 401; }
+  .intro__brand {
+    z-index: 400;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #000000; }
+    .intro__brand__jordan {
+      left: 21rem;
+      width: 10rem;
+      height: 10rem;
+      padding: 2rem;
+      position: fixed; }
+      .intro__brand__jordan__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%; }
+    .intro__brand__nike {
+      width: 10rem;
+      height: 10rem;
+      right: 30rem;
+      bottom: 0rem;
+      padding: 2rem; }
+      .intro__brand__nike__img {
+        object-fit: cover;
+        width: 100%;
+        height: 80%;
+        background: white;
+        transform: translate(0.7rem, 0.8rem); }
+  .intro__shoe {
+    width: 55rem;
+    object-fit: cover;
+    position: fixed;
+    bottom: 1rem;
+    top: 0;
+    left: 0;
+    right: 9rem;
+    margin: auto;
+    z-index: 10000; }
+  .intro__add {
+    position: absolute;
+    font-size: 13rem;
+    font-weight: 800;
+    min-width: 100vw;
+    color: rgba(75, 5, 5, 0.514);
+    transform: rotateZ(-20deg);
+    text-shadow: 2px 0 0 rgba(75, 5, 5, 0.514), -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    opacity: 0;
+    animation: move 4s linear;
+    animation-delay: 4s; }
+    .intro__add--2 {
+      transform: rotateZ(-20deg);
+      z-index: 202;
+      animation-delay: 10s;
+      animation: move2 4s linear;
+      animation-delay: 4s; }
+
+@keyframes move {
+  0% {
+    transform: rotateZ(-20deg) translateX(100%);
+    opacity: 0; }
+  100% {
+    transform: rotateZ(-20deg) translateX(-100%);
+    opacity: 1; } }
+
+@keyframes move2 {
+  0% {
+    transform: rotateZ(-20deg) translateX(-100%) translateY(30rem);
+    opacity: 0; }
+  100% {
+    transform: rotateZ(-20deg) translateX(100%) translateY(30rem);
+    opacity: 1; } }
+
+.jordan {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .jordan__text {
+    width: 50%;
+    height: 90%;
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    font-weight: 600;
+    flex-direction: column;
+    justify-content: center; }
+    .jordan__text p {
+      text-align: center;
+      width: 50%;
+      font-size: 1.3rem;
+      line-height: 1.3;
+      margin-left: 8rem;
+      color: var(--color-white); }
+  .jordan__title {
+    width: 50%;
+    font-size: 4rem;
+    position: relative;
+    margin-bottom: 3rem;
+    margin-left: 8rem; }
+    .jordan__title__brand {
+      z-index: -2;
+      object-fit: cover;
+      top: 1rem;
+      bottom: 11rem;
+      margin: auto;
+      display: block;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #000000;
+      width: 10rem;
+      height: 10rem;
+      left: 22rem;
+      bottom: 13rem;
+      padding: 2rem;
+      position: fixed; }
+      .jordan__title__brand__img {
+        object-fit: cover;
+        width: 100%;
+        height: 80%;
+        background: white; }
+    .jordan__title__text {
+      color: var(--color-white);
+      text-align: center;
+      z-index: 401; }
+  .jordan__img {
+    width: 45%;
+    height: 90%;
+    margin: auto;
+    background-image: linear-gradient(324deg, rgba(195, 38, 49, 0.432) 52%, rgba(195, 38, 49, 0.432) 100%), url("../img/jordan.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    box-shadow: 10px 10px 24px -12px #080808;
+    border-radius: 3px; }
+
+.nike {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .nike__text {
+    width: 50%;
+    height: 90%;
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    font-weight: 600;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .nike__text p {
+      text-align: center;
+      width: 50%;
+      font-size: 1.3rem;
+      line-height: 1.3;
+      margin-left: 9rem;
+      color: var(--color-white); }
+  .nike__title {
+    width: 50%;
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 6rem;
+    margin-left: 9rem; }
+    .nike__title__brand {
+      z-index: -2;
+      object-fit: cover;
+      top: .3rem;
+      bottom: 11rem;
+      margin: auto;
+      display: block;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #000000;
+      width: 10rem;
+      height: 10rem;
+      right: 22rem;
+      bottom: 13rem;
+      padding: 2rem;
+      position: fixed; }
+      .nike__title__brand__img {
+        object-fit: cover;
+        width: 160%;
+        height: 80%;
+        background: white;
+        transform: translate(-1.2rem, 2rem); }
+    .nike__title__text {
+      z-index: 20;
+      text-align: center;
+      color: var(--color-white);
+      transform: translate(1.4rem, 0.2rem); }
+  .nike__img {
+    width: 45%;
+    height: 90%;
+    margin: auto;
+    background-image: linear-gradient(324deg, rgba(195, 38, 49, 0.432) 52%, rgba(195, 38, 49, 0.432) 100%), url("../img/brook.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    box-shadow: 10px 10px 24px -12px #080808;
+    border-radius: 3px; }

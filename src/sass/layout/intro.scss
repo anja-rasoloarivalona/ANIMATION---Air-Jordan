@@ -22,26 +22,61 @@
     }
 
     &__brand {
-        z-index: 10000;
+        z-index: 400;
         object-fit: cover;
         position: absolute;
         top: 0;
         bottom: 0;
         margin: auto;
         display: block;
-        opacity: 0;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #000000;
+     //   opacity: 0;
+        
+       
+       // opacity: 0;
 
-        &--jordan {  
-            height: 15rem;         
-           left: 0rem;
-           transform: rotateZ(-8deg) translate(21rem, 2rem);
+        &__jordan {  
+            left: 21rem;
+            width: 10rem;
+            height: 10rem;
+            padding: 2rem;
+            position: fixed;
+        
+       
+            &__img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+             
+            }
+            
+
+        
+   
         }
 
-        &--nike {  
-            width: 20rem;
-            right: 0rem;
-            border: none;
-            transform: translate(-19rem, 3rem);
+        &__nike {  
+            width: 10rem;
+            height: 10rem;
+            right: 30rem;
+            bottom: 0rem;
+            padding: 2rem;
+         
+
+                &__img {
+                object-fit: cover;
+                width: 100%;
+                height: 80%;
+                background: white;
+                transform: translate(.7rem, .8rem);
+        
+          
+      
+             
+            }
+         
         }
         
         

@@ -25,7 +25,11 @@ function copyHtml() {
     .pipe(browserSync.stream())   
 }
 
-
+function svgHandler(){
+    return src('src/img/icon/sprite.svg')
+    .pipe(dest('dist/img/icon'))
+    .pipe(browserSync.stream())   
+}
 /*--------------Optimize Img------------------*/
 
 function minImg() {
@@ -34,12 +38,6 @@ function minImg() {
         imagemin.gifsicle({interlaced: true}),
         imagemin.jpegtran({progressive: true, optimizationLevel: 5}),
         imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ]
-        })
     ]))
       .pipe(dest('dist/img'))
       .pipe(browserSync.stream());  
@@ -75,6 +73,7 @@ exports.default = function(){
         server: './dist/'
     });
     watch('src/img/*', minImg);
+    watch('src/img/icon/sprite.svg', svgHandler);
     watch('src/js/*.js', scripts);
     watch('src/sass/**/*.scss' , compileSass);
     watch('src/*.html' , copyHtml).on('change', browserSync.reload);
@@ -83,7 +82,7 @@ exports.default = function(){
 
 /*------------BUILD----------------*/
 
-exports.build = series(copyHtml, minImg,scripts, compileSass);
+exports.build = series(copyHtml, minImg,scripts, compileSass, svgHandler);
 
 /*
 exports.sass = compileSass;
