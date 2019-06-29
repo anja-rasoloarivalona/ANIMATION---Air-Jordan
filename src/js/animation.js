@@ -109,10 +109,20 @@ $(document).ready(function() {
 
 
   var zero = 0;
-  $(window).on("scroll", function() {
-    $(".nav").toggleClass("nav__hide", $(window).scrollTop() > zero);
-    zero = $(window).scrollTop();
-  });
+  var zer = 0;
+
+  if(width >= 670) {
+    $(window).on("scroll", function() {
+
+      $(".nav").toggleClass("nav__hide", $(window).scrollTop() > zero);
+      zero = $(window).scrollTop();
+      
+      $(".logo").toggleClass("nav__hide", $(window).scrollTop() > zer);
+      zer = $(window).scrollTop();
+    });
+  }
+
+  
 
   var next = new TimelineMax();
   next
@@ -147,5 +157,33 @@ $(document).ready(function() {
     .setTween(next)
     // .addIndicators()
     .addTo(controller);
+
+
+    var showSide = false;
+
+    var sidebarIn = new TimelineMax
+        sidebarIn
+        .to('.nav--small__toggle__1', .4, {rotation: 135, position:'absolute', top: '1rem',ease: Power2.easeOut})
+        .to('.nav--small__toggle__3', .4, {rotation: -135, position:'absolute', top: '1rem', ease: Power2.easeOut},'-=.4') 
+        .to('.nav', .4, {x: 0,ease: Power2.easeIn},'-=.6')
+        .stop()
+
+    var togglebar = new TimelineMax
+        togglebar
+     .to('.nav--small__toggle__2', .4, {opacity: 0, scale: 0})
+     .stop()
+
+      $('.nav--small__toggle').on('click', function(){
+        if(!showSide){
+          sidebarIn.play();
+          togglebar.play();
+          return showSide = true;
+        } else {
+          sidebarIn.reverse();
+          togglebar.reverse();
+          return showSide = false;
+        }
+         
+      })
 
 });
